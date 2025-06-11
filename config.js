@@ -6,7 +6,7 @@ window.CONFIG = {
       name:      "placeholder",
       label:     "Demo SFX",
       audio:     "assets/audio/ticking-clock-108342.mp3",
-      mainImage: "assets/images/placeholder-main.png",
+      mainImage: "assets/frames/placeholder/03311262-18a0-4e24-b4bb-ed73b2d472b9.png",
       frames: [
         "assets/frames/placeholder/1.png",
         "assets/frames/placeholder/2.png",
