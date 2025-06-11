@@ -1,18 +1,34 @@
-// must run first, so soundboard.js can see window.CONFIG
+// config.js — loaded before soundboard.js
 console.log("config.js loaded");
 window.CONFIG = {
   items: [
     {
       name:      "placeholder",
       label:     "Demo SFX",
-      audio:     "https://sggregory76.github.io/sound-comic-widget/assets/audio/ticking-clock-108342.mp3",
-      mainImage: "https://sggregory76.github.io/sound-comic-widget/assets/images/03311262-18a0-4e24-b4bb-ed73b2d472b9.png",
+      audio:     "assets/audio/ticking-clock-108342.mp3",
+      mainImage: "assets/images/placeholder-main.png",
       frames: [
-        "https://sggregory76.github.io/sound-comic-widget/assets/frames/placeholder/assets/images/03311262-18a0-4e24-b4bb-ed73b2d472b9.png",
-        "https://sggregory76.github.io/sound-comic-widget/assets/frames/placeholder/2.png",
-        "https://sggregory76.github.io/sound-comic-widget/assets/frames/placeholder/3.png"
+        "assets/frames/placeholder/1.png",
+        "assets/frames/placeholder/2.png",
+        "assets/frames/placeholder/3.png"
       ]
     },
-    // …add more here…
+    {
+      name:      "boing",
+      label:     "Boing SFX",
+      audio:     "assets/audio/boing.mp3",
+      mainImage: "assets/images/boing-main.png",
+      frames: [
+        "assets/frames/boing/1.png",
+        "assets/frames/boing/2.png",
+        "assets/frames/boing/3.png"
+      ]
+    }
+    // ← To add more:
+    // 1. Duplicate one object here.
+    // 2. Give it a unique name/label.
+    // 3. Point audio→ your .mp3 in assets/audio.
+    // 4. Point mainImage→ your header image in assets/images.
+    // 5. List your frames PNGs in assets/frames/<name>/
   ]
 };
