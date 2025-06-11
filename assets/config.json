@@ -4,7 +4,7 @@
     {
       "name":   "placeholder",
       "label":  "Demo SFX",
-      "audio":  "assets/audio/tic-toc.mp3",
+      "audio":  "assets/audio/ticking-clock-108342.mp3",
       "frames": [
         "assets/frames/placeholder/1.png",
         "assets/frames/placeholder/2.png",
