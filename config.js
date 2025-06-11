@@ -19,7 +19,7 @@ window.CONFIG = {
       audio:     "assets/audio/ticking-clock-108342.mp3",
       mainImage: "assets/images/boing-main.png",
       frames: [
-        "assets/frames/boing/1.png",
+        "assets/frames/placeholder/1.png",
         "assets/frames/boing/2.png",
         "assets/frames/boing/3.png"
       ]
