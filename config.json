@@ -4,16 +4,13 @@
     {
       "name":   "placeholder",
       "label":  "Demo SFX",
-      "audio":  "assets/audio/ticking-clock-108342.mp3",
+      "audio":  "assets/audio/placeholder.mp3",
       "frames": [
-        "assets/frames/placeholder/03311262-18a0-4e24-b4bb-ed73b2d472b9.png",
+        "assets/frames/placeholder/1.png",
         "assets/frames/placeholder/2.png",
         "assets/frames/placeholder/3.png"
       ]
     }
-    // ← To add more sounds, duplicate this object and:
-    //    • give each a unique "name" and "label"
-    //    • set "audio" to your MP3 path
-    //    • list your "frames" PNG paths
+    // To add more, copy this block, give each a unique "name"/"label"/"audio" and its own "frames" array
   ]
 }
