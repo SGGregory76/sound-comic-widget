@@ -1,16 +1,30 @@
-// https://yourusername.github.io/sound-comic-widget/config.js
+// config.js — drop this in your repo alongside soundboard.js, and serve via GitHub Pages
 window.CONFIG = {
   items: [
     {
-      name:   "laugh",
-      label:  "Laugh SFX",
-      audio:  "assets/audio/ticking-clock-108342.mp3",
-      frames: [
-        "https://SGGregory76.github.io/sound-comic-widget/assets/images/03311262-18a0-4e24-b4bb-ed73b2d472b9.png",
-        "https://SGGregory76.github.io/sound-comic-widget/assets/frames/placeholder/2.png",
-        "https://SGGregory76.github.io/sound-comic-widget/assets/frames/placeholder/3.png"
+      name:      "placeholder",
+      label:     "Demo SFX",
+      audio:     "https://sggregory76.github.io/sound-comic-widget/assets/audio/ticking-clock-108342.mp3",
+      mainImage: "https://sggregory76.github.io/sound-comic-widget/assets/images/placeholder-main.png",
+      panels: [
+        "https://sggregory76.github.io/sound-comic-widget/assets/frames/placeholder/1.png",
+        "https://sggregory76.github.io/sound-comic-widget/assets/frames/placeholder/2.png",
+        "https://sggregory76.github.io/sound-comic-widget/assets/frames/placeholder/3.png"
+      ]
+    },
+    {
+      name:      "boing",
+      label:     "Boing SFX",
+      audio:     "https://sggregory76.github.io/sound-comic-widget/assets/audio/boing.mp3",
+      mainImage: "https://sggregory76.github.io/sound-comic-widget/assets/images/boing-main.png",
+      panels: [
+        "https://sggregory76.github.io/sound-comic-widget/assets/frames/boing/1.png",
+        "https://sggregory76.github.io/sound-comic-widget/assets/frames/boing/2.png",
+        "https://sggregory76.github.io/sound-comic-widget/assets/frames/boing/3.png"
       ]
     }
-    // …add more here…
+    // ← To add more, duplicate one of these objects,
+    //     give it a unique name/label, point audio→ your MP3,
+    //     mainImage→ your header image, panels→ your frame URLs.
   ]
 };
