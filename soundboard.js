@@ -1,48 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
-  console.log("soundboard.js started, CONFIG=", window.CONFIG);
-  const cfg   = window.CONFIG,
-        board = document.getElementById('soundboard'),
-        grid  = document.getElementById('grid-container');
-  let anim;
+import { config } from './config.js';
 
-  if (!cfg || !Array.isArray(cfg.items)) {
-    board.textContent = "Error: CONFIG not found";
-    return;
-  }
+const playBtn = document.getElementById('play-btn');
+const stopBtn = document.getElementById('stop-btn');
+const varspeed = document.getElementById('varspeed');
+const speedValue = document.getElementById('speed-value');
+const frameImg = document.getElementById('frame');
 
-  board.textContent = '';  
+let audio;
+let animationTimer;
 
-  cfg.items.forEach(item => {
-    // swap main image
-    if (item.mainImage) {
-      let mi = document.getElementById('main-image');
-      if (!mi) {
-        mi = document.createElement('img');
-        mi.id = 'main-image';
-        mi.style = 'display:block;margin:0 auto 16px;max-width:100%';
-        board.parentNode.insertBefore(mi, board);
-      }
-      mi.src = item.mainImage;
-    }
+function init() {
+  audio = new Audio(config.audioPath);
+  audio.loop = false;
 
-    // prepare audio
-    const audio = new Audio(item.audio);
-    audio.preload = 'auto';
-
-    // button
-    const btn = document.createElement('button');
-    btn.textContent = item.label;
-    btn.onclick = () => {
-      clearInterval(anim);
-      grid.innerHTML = '';
-      item.frames.forEach(src => {
-        const img = document.createElement('img');
-        img.src   = src;
-        grid.appendChild(img);
-      });
-      audio.currentTime = 0;
-      audio.play();
-    };
-    board.appendChild(btn);
+  varspeed.addEventListener('input', () => {
+    const speed = parseFloat(varspeed.value);
+    speedValue.textContent = speed.toFixed(1) + '×';
+    audio.playbackRate = speed;
   });
-});
+
+  playBtn.addEventListener('click', play);
+  stopBtn.addEventListener('click', stop);
+}
+
+function play() {
+  stop();
+  let frameIndex = 1;
+  const speed = parseFloat(varspeed.value);
+  const effectiveInterval = config.frameIntervalMs / speed;
+
+  audio.currentTime = 0;
+  audio.play();
+
+  animationTimer = setInterval(() => {
+    frameImg.src = `${config.framesPath}${frameIndex}.png`;
+    frameIndex = frameIndex % config.frameCount + 1;
+  }, effectiveInterval);
+}
+
+function stop() {
+  if (audio) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+  clearInterval(animationTimer);
+  frameImg.src = 'assets/frames/placeholder/1.png';
+}
+
+window.addEventListener('DOMContentLoaded', init);
