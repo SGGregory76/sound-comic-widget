@@ -1,5 +1,17 @@
-<div id="soundboard"></div>
-<div id="grid-container"></div>
+<!-- Load widget CSS -->
+<link
+  rel="stylesheet"
+  href="https://sggregory76.github.io/sound-comic-widget/soundboard.css">
 
+<!-- Soundboard & panels -->
+<div id="soundboard">Loading…</div>
+<div id="grid-container"
+     style="display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+            grid-gap:8px;
+            margin-top:16px;">
+</div>
+
+<!-- Load your config and widget logic -->
 <script src="https://sggregory76.github.io/sound-comic-widget/config.js"></script>
 <script src="https://sggregory76.github.io/sound-comic-widget/soundboard.js"></script>
