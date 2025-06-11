@@ -1,25 +1,34 @@
-# Sound + Comic Widget
+# Sound + Comic Widget
 
-A self-contained, JS-driven soundboard that plays SFX and displays comic panels.
+Self-contained soundboard that plays SFX and displays comic panels with a swappable main image.
 
 ## Files
 
-- **index.html** – your demo page (includes main test image)
-- **soundboard.css** – styling for buttons & panels
-- **soundboard.js** – reads `config.json`, builds UI, plays audio, swaps frames
-- **config.js** – list your sounds & frames here
-- **assets/** – your media
-  - **images/main-test.png** – main demo image
-  - **audio/*.mp3** – sound files
-  - **frames/<name>/*.png** – panel sequences
+- `index.html` – demo page (for GitHub Pages or local viewing)
+- `soundboard.css` – styling
+- `config.js` – list your sounds, main images, and frame sequences
+- `soundboard.js` – widget logic
+- `assets/` – media assets
+  - `images/` – header images
+  - `audio/` – MP3 files
+  - `frames/` – folders of PNG sequences
 
-## How to add more sounds
+## Usage
 
-1. **Drop** your MP3 into `assets/audio/` (e.g. `my-sfx.mp3`).
-2. **Add** a folder under `assets/frames/` with your PNGs (e.g. `assets/frames/my-sfx/1.png`, etc).
-3. **Open** `config.json`, duplicate the example object in `"items"`, and update:
-   - `"name"` and `"label"`  
-   - `"audio": "assets/audio/my-sfx.mp3"`  
-   - `"frames": ["assets/frames/my-sfx/1.png", ...]`
-   - Good Luck! Have Fun!
+1. **Customize**  
+   - Drop your MP3s into `assets/audio/`.
+   - Drop your header images into `assets/images/`.
+   - Drop your frame PNGs into `assets/frames/<name>/`.
+   - Edit `config.js` to add or update items.
 
+2. **Host**  
+   - Upload the entire folder to GitHub Pages (or any static host).
+   - Link `index.html` in an `<iframe>`, or embed the CSS/JS snippet in Blogger as shown.
+
+3. **Embed on Blogger**  
+   ```html
+   <link rel="stylesheet" href="https://…/soundboard.css">
+   <div id="soundboard"></div>
+   <div id="grid-container"></div>
+   <script src="https://…/config.js"></script>
+   <script src="https://…/soundboard.js"></script>
