@@ -20,9 +20,6 @@ A self-contained, JSON-driven soundboard that plays SFX and displays comic panel
 3. **Open** `config.json`, duplicate the example object in `"items"`, and update:
    - `"name"` and `"label"`  
    - `"audio": "assets/audio/my-sfx.mp3"`  
-   - `"frames": ["assets/frames/my-sfx/1.png", ...]`  
-4. **Zip** the entire `sound-comic-widget/` folder.
-5. **Upload** to Gumroad as a Digital Product.
-
-Buyers get a demo out of the box and just tweak the JSON. Easy, locked-in, and fully customizable. Good luck! 🎉
+   - `"frames": ["assets/frames/my-sfx/1.png", ...]`
+   - Good Luck! Have Fun!
 
