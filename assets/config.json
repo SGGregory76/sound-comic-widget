@@ -1,1 +1,16 @@
+{
+  "canvas": { "width": 400, "height": 300, "frameRate": 6 },
+  "items": [
+    {
+      "name":   "placeholder",
+      "label":  "Demo SFX",
+      "audio":  "assets/audio/tic-toc.mp3",
+      "frames": [
+        "assets/frames/placeholder/1.png",
+        "assets/frames/placeholder/2.png",
+        "assets/frames/placeholder/3.png"
+      ]
+    }
+  ]
+}
 
