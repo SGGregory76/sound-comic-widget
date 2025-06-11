@@ -1,41 +1,33 @@
 import { config } from './config.js';
 
-const playBtn = document.getElementById('play-btn');
-const stopBtn = document.getElementById('stop-btn');
-const varspeed = document.getElementById('varspeed');
-const speedValue = document.getElementById('speed-value');
 const frameImg = document.getElementById('frame');
+const soundButtonsContainer = document.querySelector('.sound-buttons');
 
 let audio;
 let animationTimer;
 
-function init() {
-  audio = new Audio(config.audioPath);
-  audio.loop = false;
-
-  varspeed.addEventListener('input', () => {
-    const speed = parseFloat(varspeed.value);
-    speedValue.textContent = speed.toFixed(1) + '×';
-    audio.playbackRate = speed;
+function createSoundButtons() {
+  config.sounds.forEach(sound => {
+    const btn = document.createElement('button');
+    btn.textContent = `Play ${sound.name}`;
+    btn.addEventListener('click', () => playSound(sound));
+    soundButtonsContainer.appendChild(btn);
   });
-
-  playBtn.addEventListener('click', play);
-  stopBtn.addEventListener('click', stop);
 }
 
-function play() {
-  stop();
-  let frameIndex = 1;
-  const speed = parseFloat(varspeed.value);
-  const effectiveInterval = config.frameIntervalMs / speed;
-
-  audio.currentTime = 0;
+function playSound(sound) {
+  stop(); // Stop any current sound/animation
+  audio = new Audio(sound.audioPath);
+  audio.playbackRate = 1;
   audio.play();
 
+  let frameIndex = 1;
   animationTimer = setInterval(() => {
-    frameImg.src = `${config.framesPath}${frameIndex}.png`;
-    frameIndex = frameIndex % config.frameCount + 1;
-  }, effectiveInterval);
+    const newSrc = `${sound.framesPath}${frameIndex}.png`;
+    frameImg.src = newSrc;
+    flashEffect(frameImg);
+    frameIndex = (frameIndex % sound.frameCount) + 1;
+  }, config.frameIntervalMs);
 }
 
 function stop() {
@@ -47,4 +39,12 @@ function stop() {
   frameImg.src = 'assets/frames/placeholder/1.png';
 }
 
-window.addEventListener('DOMContentLoaded', init);
+function flashEffect(img) {
+  img.classList.remove('flash');
+  void img.offsetWidth; // reflow
+  img.classList.add('flash');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  createSoundButtons();
+});
