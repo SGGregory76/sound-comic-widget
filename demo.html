@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sound + Comic Demo</title>
+  <style>
+    /* Soundboard container styling */
+    #soundboard {
+      font-family: sans-serif;
+      margin-bottom: 16px;
+    }
+    /* Grid container for comic panels */
+    #grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 8px;
+    }
+    #grid-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Soundboard buttons will be injected here -->
+  <div id="soundboard">Loading sounds…</div>
+
+  <!-- Comic panels will be displayed here -->
+  <div id="grid-container"></div>
+
+  <!-- Core widget logic -->
+  <script src="soundboard.js"></script>
+</body>
+</html>
 
