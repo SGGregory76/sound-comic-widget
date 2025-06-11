@@ -1,34 +1,32 @@
-# Sound + Comic Widget
+# Sound Comic Widget
 
-Self-contained soundboard that plays SFX and displays comic panels with a swappable main image.
+A simple HTML/JS widget that plays an audio effect while cycling through comic-style frames.
 
-## Files
+## Setup
 
-- `index.html` – demo page (for GitHub Pages or local viewing)
-- `soundboard.css` – styling
-- `config.js` – list your sounds, main images, and frame sequences
-- `soundboard.js` – widget logic
-- `assets/` – media assets
-  - `images/` – header images
-  - `audio/` – MP3 files
-  - `frames/` – folders of PNG sequences
+1. Clone the repo
+2. Ensure directory structure matches:
+assets/
+audio/ticking-clock-108342.mp3
+frames/
+placeholder/.png
+boing/.png
 
-## Usage
+3. Run `npm install` (for local server)
+4. Serve using a live-server or `npm start`
 
-1. **Customize**  
-   - Drop your MP3s into `assets/audio/`.
-   - Drop your header images into `assets/images/`.
-   - Drop your frame PNGs into `assets/frames/<name>/`.
-   - Edit `config.js` to add or update items.
+## Controls
 
-2. **Host**  
-   - Upload the entire folder to GitHub Pages (or any static host).
-   - Link `index.html` in an `<iframe>`, or embed the CSS/JS snippet in Blogger as shown.
+- **Play**: starts the sound & frame animation
+- **Stop**: halts playback & resets
+- **Speed slider**: adjusts playback and animation speed
 
-3. **Embed on Blogger**  
-   ```html
-   <link rel="stylesheet" href="https://…/soundboard.css">
-   <div id="soundboard"></div>
-   <div id="grid-container"></div>
-   <script src="https://…/config.js"></script>
-   <script src="https://…/soundboard.js"></script>
+## Customize
+
+- `config.js` controls:
+- `framesPath`: path to animation frames
+- `frameCount`: number of frames
+- `frameIntervalMs`: base delay between frames (lower is faster)
+- `audioPath`: audio file path
+
+Feel free to adjust paths, frame counts, timing, CSS styling, etc.
