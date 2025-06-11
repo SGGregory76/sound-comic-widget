@@ -15,12 +15,13 @@ body {
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
+  width: 340px;
 }
 
 .frame-container {
   width: 300px;
   height: 300px;
-  margin: 0 auto 1rem;
+  margin: 1rem auto;
   overflow: hidden;
 }
 
@@ -29,13 +30,13 @@ body {
   max-height: 100%;
   display: block;
   margin: 0 auto;
+  transition: all 0.2s ease;
 }
 
-.controls {
+.sound-buttons {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 button {
@@ -52,12 +53,12 @@ button:hover {
   background: #555;
 }
 
-input[type="range"] {
-  margin-left: 0.5rem;
+.flash {
+  animation: flash-effect 0.2s;
 }
 
-#speed-value {
-  display: inline-block;
-  width: 2rem;
-  text-align: left;
+@keyframes flash-effect {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.8); }
+  100% { filter: brightness(1); }
 }
