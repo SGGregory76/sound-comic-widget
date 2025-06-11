@@ -16,7 +16,7 @@ window.CONFIG = {
     {
       name:      "boing",
       label:     "Boing SFX",
-      audio:     "assets/audio/boing.mp3",
+      audio:     "assets/audio/ticking-clock-108342.mp3",
       mainImage: "assets/images/boing-main.png",
       frames: [
         "assets/frames/boing/1.png",
