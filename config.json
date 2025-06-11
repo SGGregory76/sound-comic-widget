@@ -1,0 +1,19 @@
+{
+  "mainImage": "assets/images/main-test.png",
+  "items": [
+    {
+      "name":   "placeholder",
+      "label":  "Demo SFX",
+      "audio":  "assets/audio/placeholder.mp3",
+      "frames": [
+        "assets/frames/placeholder/1.png",
+        "assets/frames/placeholder/2.png",
+        "assets/frames/placeholder/3.png"
+      ]
+    }
+    // ← To add more sounds, duplicate this object and:
+    //    • give each a unique "name" and "label"
+    //    • set "audio" to your MP3 path
+    //    • list your "frames" PNG paths
+  ]
+}
