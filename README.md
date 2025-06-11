@@ -1,13 +1,13 @@
 # Sound + Comic Widget
 
-A self-contained, JSON-driven soundboard that plays SFX and displays comic panels.
+A self-contained, JS-driven soundboard that plays SFX and displays comic panels.
 
 ## Files
 
 - **index.html** – your demo page (includes main test image)
 - **soundboard.css** – styling for buttons & panels
 - **soundboard.js** – reads `config.json`, builds UI, plays audio, swaps frames
-- **config.json** – list your sounds & frames here
+- **config.js** – list your sounds & frames here
 - **assets/** – your media
   - **images/main-test.png** – main demo image
   - **audio/*.mp3** – sound files
