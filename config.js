@@ -8,7 +8,7 @@ window.CONFIG = {
       audio:     "https://sggregory76.github.io/sound-comic-widget/assets/audio/ticking-clock-108342.mp3",
       mainImage: "https://sggregory76.github.io/sound-comic-widget/assets/images/03311262-18a0-4e24-b4bb-ed73b2d472b9.png",
       frames: [
-        "https://sggregory76.github.io/sound-comic-widget/assets/frames/placeholder/1.png",
+        "https://sggregory76.github.io/sound-comic-widget/assets/frames/placeholder/assets/images/03311262-18a0-4e24-b4bb-ed73b2d472b9.png",
         "https://sggregory76.github.io/sound-comic-widget/assets/frames/placeholder/2.png",
         "https://sggregory76.github.io/sound-comic-widget/assets/frames/placeholder/3.png"
       ]
