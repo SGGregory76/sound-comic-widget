@@ -3,7 +3,7 @@ console.log("config.js loaded");
 window.CONFIG = {
   items: [
     {
-      name:      "placeholder",
+      name:      "images",
       label:     "Demo SFX",
       audio:     "assets/audio/ticking-clock-108342.mp3",
       mainImage: "assets/images/03311262-18a0-4e24-b4bb-ed73b2d472b9.png",
