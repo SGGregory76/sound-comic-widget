@@ -1,6 +1,17 @@
 export const config = {
-  framesPath: 'assets/frames/boing/',
-  frameCount: 3,
-  frameIntervalMs: 200,
-  audioPath: 'assets/audio/ticking-clock-108342.mp3',
+  sounds: [
+    {
+      name: 'Tick',
+      audioPath: 'assets/audio/tick.mp3',
+      framesPath: 'assets/frames/tick/',
+      frameCount: 3
+    },
+    {
+      name: 'Pop',
+      audioPath: 'assets/audio/pop.mp3',
+      framesPath: 'assets/frames/pop/',
+      frameCount: 3
+    }
+  ],
+  frameIntervalMs: 300
 };
