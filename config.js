@@ -1,8 +1,8 @@
 export const config = {
   sounds: [
     {
-      name: "placeholder",
-      label: "Demo SFX",
+      name: "tick",
+      label: "Tick SFX",
       audio: "assets/audio/ticking-clock-108342.mp3",
       mainImg: "assets/frames/placeholder/1.png",
       panels: [
@@ -10,7 +10,17 @@ export const config = {
         "assets/frames/placeholder/2.png",
         "assets/frames/placeholder/3.png"
       ]
+    },
+    {
+      name: "pop",
+      label: "Pop SFX",
+      audio: "assets/audio/pop.mp3",
+      mainImg: "assets/frames/pop/1.png",
+      panels: [
+        "assets/frames/pop/1.png",
+        "assets/frames/pop/2.png",
+        "assets/frames/pop/3.png"
+      ]
     }
-    // Add more items here
   ]
 };
