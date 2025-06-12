@@ -1,64 +1,50 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #eee;
+  background: #fff;
+  font-family: sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  padding: 20px;
 }
 
 .sound-comic-widget {
-  background: #333;
-  border: 2px solid #555;
-  padding: 1rem;
-  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
   text-align: center;
-  width: 340px;
 }
 
-.frame-container {
-  width: 300px;
-  height: 300px;
-  margin: 1rem auto;
-  overflow: hidden;
-}
-
-.frame-container img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  margin: 0 auto;
-  transition: all 0.2s ease;
+#main-img {
+  width: 100%;
+  height: auto;
+  border: 4px solid #000;
+  margin-bottom: 16px;
 }
 
 .sound-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 button {
-  background: #444;
-  border: 1px solid #666;
-  color: #eee;
-  padding: 0.5rem 1rem;
+  background: #ffd700;
+  border: 2px solid #000;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
-  border-radius: 4px;
-  font-size: 1rem;
+  box-shadow: 2px 2px 0 #333;
 }
 
-button:hover {
-  background: #555;
+.frame-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 8px;
 }
 
-.flash {
-  animation: flash-effect 0.2s;
-}
-
-@keyframes flash-effect {
-  0% { filter: brightness(1); }
-  50% { filter: brightness(1.8); }
-  100% { filter: brightness(1); }
+.frame-grid img {
+  width: 100%;
+  border: 2px solid #000;
 }
