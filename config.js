@@ -2,7 +2,7 @@ export const config = {
   sounds: [
     {
       name: 'Alien',
-      audioPath: 'assets/audio/tick.mp3',
+      audioPath: 'assets/audio/alien-message-received-108372.mp3',
       framesPath: 'assets/frames/tick/',
       frameCount: 3
     },
