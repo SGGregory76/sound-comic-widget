@@ -15,5 +15,5 @@ export const config = {
   ],
   frameIntervalMs: 300,
   placeholderFrame: 'https://SGGregory76.github.io/sound-comic-widget/assets/frames/placeholder/1.png',
-  mainImage: 'https://SGGregory76.github.io/sound-comic-widget/assets/images/main.png'
+  mainImage: 'https://SGGregory76.github.io/sound-comic-widget/assets/images/03311262-18a0-4e24-b4bb-ed73b2d472b9.png'
 };
