@@ -12,6 +12,7 @@ config.sounds.forEach(item => {
 
   const btn = document.createElement('button');
   btn.textContent = item.label;
+
   btn.addEventListener('click', () => {
     if (currentAudio && currentAudio !== audio) {
       currentAudio.pause();
@@ -20,6 +21,7 @@ config.sounds.forEach(item => {
 
     mainImg.src = item.mainImg || item.panels[0];
     gridContainer.innerHTML = '';
+
     item.panels.forEach(src => {
       const img = document.createElement('img');
       img.src = src;
