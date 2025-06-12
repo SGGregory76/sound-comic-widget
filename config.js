@@ -1,8 +1,8 @@
 export const config = {
   sounds: [
     {
-      name: "Alien",
-      label: "Alien SFX",
+      name: "logo",
+      label: "Epic Logo",
       audio: "assets/audio/epic-logo-6906.mp3",
       mainImg: "assets/images/738f60bf-4e07-442b-a3a3-dcc1eeeb89b9.png",
       panels: [
