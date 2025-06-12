@@ -1,50 +1,35 @@
 import { config } from './config.js';
 
-const frameImg = document.getElementById('frame');
-const soundButtonsContainer = document.querySelector('.sound-buttons');
+const mainImg = document.getElementById('main-img');
+const buttonsContainer = document.querySelector('.sound-buttons');
+const gridContainer = document.querySelector('.frame-grid');
 
-let audio;
-let animationTimer;
+let currentAudio = null;
 
-function createSoundButtons() {
-  config.sounds.forEach(sound => {
-    const btn = document.createElement('button');
-    btn.textContent = `Play ${sound.name}`;
-    btn.addEventListener('click', () => playSound(sound));
-    soundButtonsContainer.appendChild(btn);
-  });
-}
+config.sounds.forEach(item => {
+  const audio = new Audio(item.audio);
+  audio.preload = "auto";
 
-function playSound(sound) {
-  stop(); // Stop any current sound/animation
-  audio = new Audio(sound.audioPath);
-  audio.playbackRate = 1;
-  audio.play();
+  const btn = document.createElement('button');
+  btn.textContent = item.label;
+  btn.addEventListener('click', () => {
+    if (currentAudio && currentAudio !== audio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
 
-  let frameIndex = 1;
-  animationTimer = setInterval(() => {
-    const newSrc = `${sound.framesPath}${frameIndex}.png`;
-    frameImg.src = newSrc;
-    flashEffect(frameImg);
-    frameIndex = (frameIndex % sound.frameCount) + 1;
-  }, config.frameIntervalMs);
-}
+    mainImg.src = item.mainImg || item.panels[0];
+    gridContainer.innerHTML = '';
+    item.panels.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      gridContainer.appendChild(img);
+    });
 
-function stop() {
-  if (audio) {
-    audio.pause();
     audio.currentTime = 0;
-  }
-  clearInterval(animationTimer);
-  frameImg.src = 'assets/frames/placeholder/1.png';
-}
+    audio.play();
+    currentAudio = audio;
+  });
 
-function flashEffect(img) {
-  img.classList.remove('flash');
-  void img.offsetWidth; // reflow
-  img.classList.add('flash');
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  createSoundButtons();
+  buttonsContainer.appendChild(btn);
 });
