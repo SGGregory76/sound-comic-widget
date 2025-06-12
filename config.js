@@ -9,7 +9,7 @@ export const config = {
     {
       name: 'Pop',
       audioPath: 'https://SGGregory76.github.io/sound-comic-widget/assets/audio/Boing.m4a',
-      framesPath: 'https://SGGregory76.github.io/sound-comic-widget/assets/frames/pop/',
+      framesPath: 'https://SGGregory76.github.io/sound-comic-widget/assets/frames/placeholder/260a7a9e-b855-428d-b862-84f6189fdd7d.png',
       frameCount: 3
     }
   ],
