@@ -8,8 +8,8 @@ export const config = {
     },
     {
       name: 'Boing',
-      audioPath: 'assets/audio/pop.mp3',
-      framesPath: 'assets/frames/pop/',
+      audioPath: 'assets/audio/Boing.m4a',
+      framesPath: 'assets/frames/boing/',
       frameCount: 3
     }
   ],
