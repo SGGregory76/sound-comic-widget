@@ -1,9 +1,9 @@
 export const config = {
   sounds: [
     {
-      name: "tick",
-      label: "Tick SFX",
-      audio: "assets/audio/ticking-clock-108342.mp3",
+      name: "Alien",
+      label: "Alien SFX",
+      audio: "assets/audio/alien-message-received-108372.mp3",
       mainImg: "assets/frames/placeholder/1.png",
       panels: [
         "assets/frames/placeholder/1.png",
