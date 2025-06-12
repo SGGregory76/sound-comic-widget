@@ -8,7 +8,7 @@ export const config = {
     },
     {
       name: 'Pop',
-      audioPath: 'https://SGGregory76.github.io/sound-comic-widget/assets/audio/pop.mp3',
+      audioPath: 'https://SGGregory76.github.io/sound-comic-widget/assets/audio/Boing.m4a',
       framesPath: 'https://SGGregory76.github.io/sound-comic-widget/assets/frames/pop/',
       frameCount: 3
     }
