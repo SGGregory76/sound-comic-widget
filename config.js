@@ -3,7 +3,7 @@ export const config = {
     {
       name: 'Alien',
       audioPath: 'assets/audio/alien-message-received-108372.mp3',
-      framesPath: 'assets/frames/tick/',
+      framesPath: 'assets/frames/alien/',
       frameCount: 3
     },
     {
