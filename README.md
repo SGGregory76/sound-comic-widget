@@ -1,9 +1,8 @@
         🎙️ Sound Comic Widget
-
+        
 Bring comic-style sound effects to life with this interactive HTML widget. Users can click buttons to play audio and reveal matching comic panels — ideal for bloggers, authors, educators, and creators.
 
         📦 What's Inside
-
 sound-comic-widget/
 ├── index.html → Standalone demo page
 ├── soundboard.css → Widget styles
@@ -16,14 +15,16 @@ sound-comic-widget/
 └── frames/ → Comic panel images
 
         ✅ How to Use
+        
+        🔹 Blogger Users
 
-       🔹 Blogger Users
 1. Open `blogger-snippet.html`
 2. Copy the **entire HTML block**
 3. Paste into a **Blogger HTML/JavaScript Gadget**
 4. Save and preview!
 
        🔹 Developers / Web Users
+
 1. Open `index.html` in a browser
 2. Modify `config.js` to customize sounds & images
 3. Host files via GitHub Pages, Netlify, or your own site
