@@ -2,7 +2,7 @@ export const config = {
   sounds: [
     {
       name: 'Tick',
-      audioPath: 'https://SGGregory76.github.io/sound-comic-widget/assets/audio/tick.mp3',
+      audioPath: 'https://SGGregory76.github.io/sound-comic-widget/assets/audio/assets/audio/alien-message-received-108372.mp3',
       framesPath: 'https://SGGregory76.github.io/sound-comic-widget/assets/frames/tick/',
       frameCount: 3
     },
