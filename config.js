@@ -1,8 +1,8 @@
 window.CONFIG = {
   scenes: [
     {
-      image: "https://raw.githubusercontent.com/SGGregory76/sound-comic-widget/main/assets/frames/placeholder/ecbbc098-2535-48f1-acfa-ec26fad2c7d2.png",
-      sound: "https://raw.githubusercontent.com/SGGregory76/sound-comic-widget/main/assets/audio/Boing.m4a"
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/House_sparrow04.jpg/640px-House_sparrow04.jpg",
+      sound: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
     }
   ]
 };
