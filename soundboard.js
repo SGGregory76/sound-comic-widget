@@ -1,37 +1,40 @@
-import { config } from './config.js';
+document.addEventListener('DOMContentLoaded', () => {
+  let currentSceneIndex = 0;
 
-const mainImg = document.getElementById('main-img');
-const buttonsContainer = document.querySelector('.sound-buttons');
-const gridContainer = document.querySelector('.frame-grid');
+  const board = document.getElementById('soundboard');
+  const grid = document.getElementById('grid-container');
+  const mainImage = document.getElementById('main-image');
 
-let currentAudio = null;
+  function loadScene(index) {
+    const scene = window.CONFIG.scenes[index];
+    if (!scene) return;
 
-config.sounds.forEach(item => {
-  const audio = new Audio(item.audio);
-  audio.preload = "auto";
+    // Update main image
+    mainImage.src = scene.mainImage;
 
-  const btn = document.createElement('button');
-  btn.textContent = item.label;
-
-  btn.addEventListener('click', () => {
-    if (currentAudio && currentAudio !== audio) {
-      currentAudio.pause();
-      currentAudio.currentTime = 0;
-    }
-
-    mainImg.src = item.mainImg || item.panels[0];
-    gridContainer.innerHTML = '';
-
-    item.panels.forEach(src => {
-      const img = document.createElement('img');
-      img.src = src;
-      gridContainer.appendChild(img);
+    // Load relevant sounds
+    board.innerHTML = '';
+    scene.sounds.forEach(sound => {
+      const btn = document.createElement('button');
+      btn.textContent = sound.label;
+      btn.onclick = () => new Audio(sound.file).play();
+      board.appendChild(btn);
     });
 
-    audio.currentTime = 0;
-    audio.play();
-    currentAudio = audio;
-  });
+    // Load frames
+    grid.innerHTML = '';
+    scene.frames.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.style = 'width:100%';
+      grid.appendChild(img);
+    });
+  }
 
-  buttonsContainer.appendChild(btn);
+  document.getElementById('next-scene').onclick = () => {
+    currentSceneIndex = (currentSceneIndex + 1) % window.CONFIG.scenes.length;
+    loadScene(currentSceneIndex);
+  };
+
+  loadScene(currentSceneIndex);
 });
